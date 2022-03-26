@@ -4,10 +4,25 @@ import { SearchContext } from '../context/SearchContext'
 function SearchBar() {
     const { term, handleSearch } = useContext(SearchContext)
 
+    // Declaring style variable
+    const styledButton = {
+        fontSize: '25px',
+        fontWeight: 'bold',
+        margin: '5px',
+        padding: '10px'
+    }
+
+    const styledInput = {
+        fontSize: '25px',
+        fontWeight: 'bold',
+        margin: '5px',
+        padding: '10px'
+    }
+
     return(
         <form>
-            <input ref={ term } type="text" placeholder="Search Here" />
-            <button onClick={(e) => handleSearch(e, term.current.value)}>Submit</button>
+            <input style= { styledInput } ref={ term } type="text" placeholder="Search Here" />
+            <button style={ styledButton } onClick={(e) => handleSearch(e, term.current.value)}>Submit</button>
         </form>
     )
 }

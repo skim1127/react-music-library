@@ -8,6 +8,7 @@ import { SearchContext } from './context/SearchContext.js';
 import AlbumView from './components/AlbumView.js'
 import ArtistView from './components/ArtistView.js';
 
+
 function App() {
   // Define state variables
   let [message, setMessage] = useState('Search for Music!')
@@ -34,7 +35,9 @@ function App() {
 
   return (
     <div className="App">
-      { message }
+      <h1 className="MainHeader">
+        { message }
+      </h1>
       <Router>
         <Routes>
           <Route path="/" element={
